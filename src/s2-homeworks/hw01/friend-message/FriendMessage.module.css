@@ -1,0 +1,60 @@
+.friendMessage {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.friendImageAndText {
+    display: flex;
+    align-items: flex-end;
+    max-width: 70%;
+    position: relative;
+    overflow: visible;
+}
+
+.friendImageAndText img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px; /* отступ слева вместо справа */
+}
+
+.friendText {
+    position: relative; /* это важно */
+    background-color: #0066cc;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+}
+
+.friendText:after {
+    content: '';
+    position: absolute;
+    top: 45px;
+    right: 290px; /* меньшее смещение */
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-left-color: #0066cc; /* цвет пузыря */
+    transform: rotate(270deg);
+}
+
+.friendName {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.friendMessageText {
+    white-space: pre-wrap;
+    text-align: right;
+}
+
+.friendTime {
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 4px;
+    color: black;
+}

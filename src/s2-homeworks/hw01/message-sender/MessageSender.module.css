@@ -1,0 +1,41 @@
+.sendForm {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.textarea {
+    flex-grow: 1;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #f0f0f0; /* светло-серый фон */
+    color: #333;
+    line-height: 1.4;
+    box-sizing: border-box;
+    outline: none;
+    overflow: hidden;
+}
+
+.button {
+    padding: 10px 36px;
+    font-size: 16px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #0052a3;
+}
+.button:active {
+
+}
