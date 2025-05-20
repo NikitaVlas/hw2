@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# hw 1
+Простой эмитатор чата, можо посмотреть как стилизовал сообщения и инпут. Небольшой функционал по отправке сообщений
 
 ## Available Scripts
 
