@@ -5,19 +5,34 @@
 }
 
 .users {
+    border-collapse: collapse;
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
 }
 
 .thead {
+    background-color: #d1d1d1;
+    font-weight: bold;
 }
 
 .nameCol {
+    padding: 10px 0 10px 10px;
+    border: none;
+    border-bottom: 1px solid #d1d1d1;
 }
 
 .ageCol {
+    padding: 10px 0 10px 10px;
+    border: none;
+    border-bottom: 1px solid #d1d1d1;
 }
