@@ -1,7 +1,9 @@
 .select {
+    margin-right: 60px;
 }
 
 .select:focus {
+    outline: none;
 }
 
 
