@@ -1,3 +1,6 @@
 .loader {
-    /*свг и/или анимация*/
+    background-image: url("./infinite-spinner.svg");
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
 }
