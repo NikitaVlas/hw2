@@ -2,6 +2,10 @@
     width: 50vw;
 }
 
+.hw15 {
+    position: relative;
+}
+
 .developer {
 
 }
@@ -23,5 +27,20 @@
 }
 
 .loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./infinite-spinner.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+}
 
+.contentDimmed {
+    opacity: 0.3;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }

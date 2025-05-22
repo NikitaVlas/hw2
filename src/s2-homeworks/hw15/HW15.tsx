@@ -52,35 +52,26 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
-                // сохранить пришедшие данные
-
-                //
+               if(res) {
+                   setTechs(res.data.techs)
+                   setTotalCount(res.data.totalCount)
+               }
             })
+            .finally(()=> setLoading(false))
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
-        // делает студент
-
-        // setPage(
-        // setCount(
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        setPage(newPage)
+        setCount(newCount)
+        sendQuery({page: newPage, count: newCount, sort})
+        setSearchParams({page: String(newPage), count: String(newCount), sort})
     }
 
     const onChangeSort = (newSort: string) => {
-        // делает студент
-
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
+        sendQuery({page, count, sort: newSort})
+        setSearchParams({page: '1', count: String(count), sort: newSort})
     }
 
     useEffect(() => {
@@ -103,12 +94,12 @@ const HW15 = () => {
     ))
 
     return (
-        <div id={'hw15'}>
+        <div id={'hw15'} className={s.hw15}>
             <div className={s2.hwTitle}>Homework #15</div>
 
-            <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+            {idLoading && <div id={'hw15-loading'} className={s.loading}></div>}
 
+            <div className={`${s2.hw} ${idLoading ? s.contentDimmed : ''}`}>
                 <SuperPagination
                     page={page}
                     itemsCountForPage={count}
@@ -119,12 +110,11 @@ const HW15 = () => {
                 <div className={s.rowHeader}>
                     <div className={s.techHeader}>
                         tech
-                        <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
+                        <SuperSort sort={sort} value={'tech'} onChange={onChangeSort} />
                     </div>
-
                     <div className={s.developerHeader}>
                         developer
-                        <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
+                        <SuperSort sort={sort} value={'developer'} onChange={onChangeSort} />
                     </div>
                 </div>
 
