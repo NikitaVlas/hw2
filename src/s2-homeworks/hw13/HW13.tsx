@@ -58,8 +58,8 @@ const HW13 = () => {
                 } else {
                     setImage(errorUnknown)
                     setCode("Error!")
-                    setText(e.response.data.errorText)
-                    setInfo(e.response.data.info)
+                    setText(String(e.message))
+                    setInfo(String(e.name))
                 }
             })
             .finally(() => setLoading(false))
